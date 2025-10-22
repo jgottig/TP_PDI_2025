@@ -1,5 +1,7 @@
 En el siguiente Repositorio "TP_PDI_2025" se presentan los puntos 1) y 2) del Trabajo Practico de Procesamiento de Imagenes.
 
+Ambos archivos .py fueron pensados para que puedan ser ejecutados en one-shot
+
 Para ejecutar el mismo, debe seguir los siguientes pasos:
   1) Clonar el repositorio con el siguiente comando en Consola --> gh repo clone jgottig/TP_PDI_2025
   2) Previamente, debe tener instaladas las librerías necesarias con los siguientes comandos:
