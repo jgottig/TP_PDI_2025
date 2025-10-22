@@ -5,14 +5,13 @@ import matplotlib.pyplot as plt
 # Leemos imagen 
 img = cv2.imread('imagen_con_detalles_escondidos.tif',cv2.IMREAD_GRAYSCALE)
 
-plt.figure()                  
-plt.imshow(img, cmap='gray')  
-plt.show()    
-
-type(img)
-img.dtype
-img.shape
+# Verificamos propiedades de la imagen
+print(type(img))
+print(img.dtype)
+print(img.shape)
 h,w = img.shape
+print("Alto: ", h)
+print("Ancho: ", w)
 
 # Función para ecualizar la imagen por bloques (local)
 def equalizer (img, m, n):
@@ -48,3 +47,15 @@ def equalizer (img, m, n):
             img_salida[y, x] = roi_eq[borde_vertical, borde_horizontal]
 
     return img_salida
+
+#Interface de Usuario por si quiere modificar los campos:
+m = 16  # Alto del bloque
+n = 16  # Ancho del bloque
+
+# Ecualizamos la imagen por bloques de 16x16
+img_eq = equalizer(img, m, n)
+# Mostramos la imagen original y la ecualizada
+cv2.imshow("Imagen Original", img)
+cv2.imshow("Imagen Ecualizada por Bloques 16x16", img_eq)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
