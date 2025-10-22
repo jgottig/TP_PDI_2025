@@ -49,13 +49,14 @@ def equalizer (img, m, n):
     return img_salida
 
 #Interface de Usuario por si quiere modificar los campos:
-m = 16  # Alto del bloque
-n = 16  # Ancho del bloque
+m = 32  # Alto del bloque
+n = 32  # Ancho del bloque
 
 # Ecualizamos la imagen por bloques de 16x16
 img_eq = equalizer(img, m, n)
 # Mostramos la imagen original y la ecualizada
 cv2.imshow("Imagen Original", img)
-cv2.imshow("Imagen Ecualizada por Bloques 16x16", img_eq)
+cv2.imshow("Imagen Ecualizada por Bloques 32x32", img_eq)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
